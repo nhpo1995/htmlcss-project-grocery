@@ -1,0 +1,21 @@
+{
+    "name": "final-projet",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass scss:assets/css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nhpo1995/htmlcss-project-grocery.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nhpo1995/htmlcss-project-grocery/issues"
+    },
+    "homepage": "https://github.com/nhpo1995/htmlcss-project-grocery#readme",
+    "description": ""
+}
