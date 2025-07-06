@@ -146,13 +146,14 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: Gordita, sans-serif;
+  font-family: "Gordita", sans-serif;
   color: var(--text-color);
   background-color: var(--body-bg-color);
 }
 
 a {
   color: inherit;
+  font-family: inherit;
   text-decoration: none;
 }
 
@@ -1304,6 +1305,9 @@ html.dark {
   left: 0;
   padding-top: 54px;
   width: min(1240px, 100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1346,6 +1350,11 @@ html.dark {
   width: 36px;
   height: 36px;
 }
+@media (max-width: 1199.98px) {
+  .menu-column__icon {
+    display: none;
+  }
+}
 .menu-column__content {
   flex: 1;
 }
@@ -1372,10 +1381,10 @@ html.dark {
 .menu-column__list {
   margin-top: 19px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
 }
@@ -1390,7 +1399,7 @@ html.dark {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-with);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, auto);
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
