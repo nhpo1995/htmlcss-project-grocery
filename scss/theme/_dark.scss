@@ -5,7 +5,17 @@ html.dark {
 
     --body-bg-color: #292e39;
     --header-bg-color: #171c28;
+    --header-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
+
+    // Drop down
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(1522%)
+        hue-rotate(186deg) brightness(88%) contrast(86%);
+    --top-menu-border-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(686%)
+        hue-rotate(180deg) brightness(100%) contrast(97%);
 }

@@ -7,10 +7,15 @@
 
 .header {
     background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow);
+    }
 }
 
 .top-bar {
     @extend %flexItemCenter;
+    position: relative;
     padding: 30px 0;
 
     @include abstracts.breakpoint(lg) {
@@ -32,20 +37,29 @@
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 129px;
 
     @include abstracts.breakpoint(xl) {
-        margin-left: 50px;
+        margin-left: 28px;
     }
 
     &__list {
         @extend %flexItemCenter;
-        column-gap: 30px;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__link {
         @extend %flexItemCenter;
         column-gap: 6px;
+        height: 50px;
+        padding: 0 15px;
+
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.67%;
